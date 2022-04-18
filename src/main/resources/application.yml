@@ -1,0 +1,21 @@
+server:
+  port: 8765
+#Database
+spring:
+  h2:
+    console:
+      enabled: true
+  datasource:
+    url: jdbc:h2:mem:test; DB_CLOSE_DELAY=-1
+    driver-class-name: org.h2.Driver
+    username:
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+  liquibase:
+    change-log: db/changelog/db.changelog-master.yaml
+    enabled: true
+    drop-first: false
+
